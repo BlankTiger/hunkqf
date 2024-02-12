@@ -4,6 +4,7 @@ fn main() {
     let cmd_output = Command::new("git")
         .arg("diff")
         .arg("-U0")
+        .arg("HEAD")
         .stdout(Stdio::piped())
         .output()
         .expect("there to be outpuut")
